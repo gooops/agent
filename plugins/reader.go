@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"fmt"
 )
 
 // key: sys/ntp/60_ntp.py
@@ -30,6 +31,7 @@ func ListPlugins(relativePath string) map[string]*Plugin {
 	}
 
 	for _, f := range fs {
+		fmt.Println(f)
 		if f.IsDir() {
 			continue
 		}
